@@ -1,5 +1,4 @@
 import React from "react";
-import MainNewsFeed from "./MainNewsFeed";
 import SearchBar from "./SearchBar";
 import TopNews from "./TopNews";
 
