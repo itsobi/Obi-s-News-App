@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import MainNewsFeed from "./MainNewsFeed";
 
 const SearchBar = () => {
   const [term, setTerm] = useState("basketball");
@@ -28,26 +29,6 @@ const SearchBar = () => {
     }
   }, [term]);
 
-  const renderedResults = results.map((article) => {
-    const { title, description, urlToImage, url, author } = article;
-    return (
-      <div key={title} className="ui segment">
-        <img
-          className="ui centered big rounded image"
-          src={urlToImage}
-          alt={title}
-        />
-        <h2 style={{ textAlign: "center" }}>
-          <a target="_blank" rel="noopener noreferrer" href={url}>
-            {title}
-          </a>
-        </h2>
-        <p style={{ textAlign: "center" }}>{author}</p>
-        <p style={{ textAlign: "center" }}>{description}</p>
-      </div>
-    );
-  });
-
   return (
     <>
       <div className="ui form">
@@ -65,7 +46,7 @@ const SearchBar = () => {
           />
         </div>
       </div>
-      <div className="ui celled list">{renderedResults}</div>
+      <MainNewsFeed results={results} />
     </>
   );
 };

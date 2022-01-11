@@ -18,9 +18,9 @@ const TopNews = () => {
     <>
       <h1 style={{ textAlign: "center", marginTop: "7rem" }}>Popular News</h1>
       {results.map((article) => {
-        const { title, description, urlToImage, url, author } = article;
+        const { title, description, urlToImage, url } = article;
         return (
-          <div key={title} className="ui segment">
+          <div key={description} className="ui segment">
             <img
               className="ui centered big rounded image"
               src={urlToImage}
@@ -31,7 +31,6 @@ const TopNews = () => {
                 {title}
               </a>
             </h2>
-            {/* <p style={{ textAlign: "center" }}>{description}</p> */}
             <p style={{ textAlign: "center" }}>
               <span dangerouslySetInnerHTML={{ __html: description }}></span>
             </p>
