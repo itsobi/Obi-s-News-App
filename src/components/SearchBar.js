@@ -33,7 +33,6 @@ const SearchBar = () => {
     <>
       <div className="ui form">
         <div className="field">
-          {/* <label>Enter Topic</label> */}
           <h1 style={{ textAlign: "center", marginTop: "1rem" }}>
             Obi's News App
           </h1>
@@ -43,6 +42,7 @@ const SearchBar = () => {
             type="text"
             className="input"
             placeholder="Enter a topic..."
+            style={{ marginBottom: "1rem" }}
           />
         </div>
       </div>
