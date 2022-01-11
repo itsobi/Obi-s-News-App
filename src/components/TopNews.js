@@ -27,7 +27,9 @@ const TopNews = () => {
               alt={title}
             />
             <h2 style={{ textAlign: "center" }}>
-              <a href={url}>{title}</a>
+              <a target="_blank" rel="noopener noreferrer" href={url}>
+                {title}
+              </a>
             </h2>
             {/* <p style={{ textAlign: "center" }}>{description}</p> */}
             <p style={{ textAlign: "center" }}>

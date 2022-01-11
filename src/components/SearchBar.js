@@ -13,15 +13,19 @@ const SearchBar = () => {
       setResults(data.articles);
     };
 
-    const timeoutId = setTimeout(() => {
-      if (term) {
-        search();
-      }
-    }, 500);
+    if (term && !results.length) {
+      search();
+    } else {
+      const timeoutId = setTimeout(() => {
+        if (term) {
+          search();
+        }
+      }, 500);
 
-    return () => {
-      clearTimeout(timeoutId);
-    };
+      return () => {
+        clearTimeout(timeoutId);
+      };
+    }
   }, [term]);
 
   const renderedResults = results.map((article) => {
@@ -34,7 +38,9 @@ const SearchBar = () => {
           alt={title}
         />
         <h2 style={{ textAlign: "center" }}>
-          <a href={url}>{title}</a>
+          <a target="_blank" rel="noopener noreferrer" href={url}>
+            {title}
+          </a>
         </h2>
         <p style={{ textAlign: "center" }}>{author}</p>
         <p style={{ textAlign: "center" }}>{description}</p>
