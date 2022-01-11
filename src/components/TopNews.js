@@ -17,10 +17,10 @@ const TopNews = () => {
   return (
     <>
       <h1 style={{ textAlign: "center", marginTop: "7rem" }}>Popular News</h1>
-      {results.map((article) => {
+      {results.map((article, index) => {
         const { title, description, urlToImage, url } = article;
         return (
-          <div key={description} className="ui segment">
+          <div key={index} className="ui segment">
             <img
               className="ui centered big rounded image"
               src={urlToImage}

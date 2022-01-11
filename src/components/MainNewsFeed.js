@@ -1,10 +1,10 @@
 import React from "react";
 
 const MainNewsFeed = ({ results }) => {
-  const renderedResults = results.map((article) => {
+  const renderedResults = results.map((article, index) => {
     const { title, description, urlToImage, url, author } = article;
     return (
-      <div key={description} className="ui segment">
+      <div key={index} className="ui segment">
         <img
           className="ui centered big rounded image"
           src={urlToImage}
