@@ -6,10 +6,12 @@ const SearchBar = () => {
   const [term, setTerm] = useState("basketball");
   const [results, setResults] = useState([]);
 
+  const key = process.env.REACT_APP_KEY;
+
   useEffect(() => {
     const search = async () => {
       const { data } = await axios.get(
-        `https://newsapi.org/v2/everything?q=${term}&apiKey=380db46efaef4481a0432398727949d7`
+        `https://newsapi.org/v2/everything?q=${term}&apiKey=${key}`
       );
       setResults(data.articles);
     };
