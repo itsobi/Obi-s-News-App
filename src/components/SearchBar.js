@@ -23,7 +23,7 @@ const SearchBar = () => {
         if (term) {
           search();
         }
-      }, 500);
+      }, 300);
 
       return () => {
         clearTimeout(timeoutId);
