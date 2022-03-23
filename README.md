@@ -1,6 +1,6 @@
 # Obi's News App
 
-News app using the [News Api](https://newsapi.org/) that allows the user to search for any current event, along with a "Popular News" section on the right side.
+News app using the [News API](https://newsapi.org/) that allows the user to search for any current event, along with a "Popular News" section on the right side.
 
 ### Project Description
 
@@ -21,7 +21,7 @@ React JS, News API, Semantic-UI
 
 `REACT_APP_KEY = XXXXXXXXXXXXXXXXX`
 
-- To get the News API Key, go to [News Api](https://newsapi.org/), click on Get API Key and enter the information to register. Once you get your key, assign it to your `REACT_APP_KEY` in your `.env` file.
+- To get the News API Key, go to [News API](https://newsapi.org/), click on Get API Key and enter the information to register. Once you get your key, assign it to your `REACT_APP_KEY` in your `.env` file.
 
 - To refere to the key anywhere in the project: `process.env.REACT_APP_KEY`.
 
