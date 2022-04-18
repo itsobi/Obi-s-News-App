@@ -23,7 +23,7 @@ React JS, News API, Semantic-UI
 
 - To get the News API Key, go to [News API](https://newsapi.org/), click on Get API Key and enter the information to register. Once you get your key, assign it to your `REACT_APP_KEY` in your `.env` file.
 
-- To refere to the key anywhere in the project: `process.env.REACT_APP_KEY`.
+- To reference the key anywhere in the project: `process.env.REACT_APP_KEY`.
 
 ### How to run the app in the browser
 
